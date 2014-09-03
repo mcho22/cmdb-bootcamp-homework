@@ -14,7 +14,7 @@ RESULT_DIR=dmel5
 ANNOTATION=dmel-all-r5.57.gff
 CORES=4
 
-for i in [:893-916]
+for i in {893..916}
 # bug 3. do/done code missing
 # bug 4/5. tophat/cufflinks inputs missing
 # bug 6. echo codes were added
