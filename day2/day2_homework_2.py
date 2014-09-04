@@ -9,4 +9,13 @@ inp = pd.read_table(csv_inputs)
 
 Sxl_inp = inp[inp["gene_short_name"]=="Sxl"]
 
-print Sxl_inp
+Sxl_value_list = []
+
+for row in Sxl_inp.iterrows():
+    index, data = row
+    Sxl_value_list.append(data.tolist())
+
+Sxl_value_extracted = Sxl_value_list[0]
+Sxl_value_trimmed = Sxl_value_extracted[9:]
+
+print Sxl_value_trimmed
