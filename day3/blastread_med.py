@@ -78,6 +78,10 @@ class BLASTReader(object):
                 temp_i = 0
             counter_i += 1
         
+        if temp_i > longest_match:
+            longest_match = temp_i
+            longest_site = counter_i - temp_i-1
+        
         longest_full_alignment = l1[longest_site:longest_site+longest_match] + " " + str(longest_site+1) + " - " + str(longest_site+longest_match) + "\n" + l2[longest_site:longest_site+longest_match] + " " + str(longest_match) + " bp" + "\n" + l3[longest_site:longest_site+longest_match] + " " + str(longest_site+1) + " - " + str(longest_site+longest_match)
                
         sequence = self.last_flyid + self.last_humanid + iden + gap + "\n" + "[BLAST alignment result]" + "\n" + l1 + "\n" + l2 + "\n" + l3 
