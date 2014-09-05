@@ -27,7 +27,7 @@ ratio_paired_list = []
 
 i = 0
 
-print "Gene_name, FPKM, GC_ratio"
+print ",FPKM,GC_ratio"
 
 for lines in new_fpkm_list:
     
