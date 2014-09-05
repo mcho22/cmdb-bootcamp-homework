@@ -42,7 +42,7 @@ for seq in paired_s:
     seq_temp = seq
     framed_list = []
     
-    while len(seq_temp) > 3:
+    while len(seq_temp) >= 3:
         framed_list.append(seq_temp[:3])
         seq_temp = seq_temp[3:]
         
@@ -51,7 +51,7 @@ for seq in paired_s:
     seq_temp = seq[1:]
     framed_list = []
     
-    while len(seq_temp) > 3:
+    while len(seq_temp) >= 3:
         framed_list.append(seq_temp[:3])
         seq_temp = seq_temp[3:]
         
@@ -60,7 +60,7 @@ for seq in paired_s:
     seq_temp = seq[1:]
     framed_list = []
     
-    while len(seq_temp) > 3:
+    while len(seq_temp) >= 3:
         framed_list.append(seq_temp[:3])
         seq_temp = seq_temp[3:]
         
@@ -72,7 +72,7 @@ orf_list = []
 
 for fn in range (len(framed_seq)):
 
-# gene number & frame number setting
+#   gene number & frame number setting
 
     gn = "Gene No. #" + str(int(fn)/6 + 1) + " // "
     if int(fn)%6 == 0:
